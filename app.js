@@ -2,7 +2,7 @@ const API_URL = getHostURL();
 
 $(document).ready(function() {
     const params = parseQuery(window.location.search);
-    console.log(params);
+    
     getUsers(params.id)
         .then(addInfo)
         .then(getCars)
@@ -58,7 +58,7 @@ $(document).ready(function() {
 
 
     function addInfo(data) {
-        console.log(data);
+
         $('.user').append(`<h1>${data.f_name} ${data.l_name}</h1>`);
         return data.id;
 
